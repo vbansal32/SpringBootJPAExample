@@ -4,13 +4,11 @@ import java.util.List;
 
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
 public class CustomerResponse {
 	
 	private String status;
 	private String message;
-	
-	List<Customer> customers;
+	private List<Customer> customers;
 
 	public CustomerResponse() {
 		super();

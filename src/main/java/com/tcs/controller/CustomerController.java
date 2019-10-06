@@ -70,7 +70,6 @@ public class CustomerController implements CustomerConstants{
 
 	@PostMapping(value="/addCustomer", produces = "application/json", consumes = "application/json")
 	public CustomerResponse addCustomer(@RequestBody String customerString){
-		//customerResponse = new CustomerResponse();
 		try {
 			Customer customer = new ObjectMapper().readValue(customerString, Customer.class);
 			customerService.addCustomer(customer);
